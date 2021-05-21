@@ -10,7 +10,7 @@ source "${OURDIR}/careful_rm.alias.sh"
 # Make a trash aliase that changes with directory
 chpwd_trash() {
     if [ -x "${CAREFUL_RM}" ]; then
-        TRASH=$(python ${CAREFUL_RM} --get-trash)
+        TRASH=$(python3 ${CAREFUL_RM} --get-trash)
         if [[ "$OSTYPE" == "linux-gnu" ]]; then
             TRASH="${TRASH}/files"
         fi
